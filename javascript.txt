@@ -1,0 +1,48 @@
+// 2022-04-17 codecademy(javascript - function[1])
+//함수 선언
+function getReminder() {
+  console.log('Water the plants.');
+}
+
+function greetInSpanish() {
+  console.log('Buenas Tardes.');
+}
+
+//함수호출
+function sayThanks() {
+  console.log('Thank you for your purchase! We appreciate your business.');
+}
+sayThanks();
+sayThanks();
+sayThanks();
+
+//매개변수 및 인수
+function sayThanks(name) {
+  console.log('Thank you for your purchase ' + name + '! We appreciate your business.');
+}
+sayThanks('Cole');
+
+//기본 매개변수
+function makeShoppingList(item1 = 'milk', item2 = 'bread', item3 = 'eggs'){
+  console.log(`Remember to buy ${item1}`);
+  console.log(`Remember to buy ${item2}`);
+  console.log(`Remember to buy ${item3}`);
+}
+
+// return - 함수 호출에서 정보를 다시 전달하기 위해 return 문을 사용
+function monitorCount(rows, columns) {
+  return rows * columns;
+}
+const numOfMonitors = monitorCount(5, 4);
+console.log(numOfMonitors);
+
+//도우미 함수
+function monitorCount(rows, columns) {
+  return rows * columns;
+};
+function costOfMonitors(rows, columns){
+  return monitorCount(rows, columns) * 200;
+};
+
+const totalCost = costOfMonitors(5, 4);
+console.log(totalCost); 
